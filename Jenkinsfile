@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
-		sh 'hello, world'
+		sh 'cp /home/danny/workspace/aa.txt /home/danny/workspace/bb.txt'
             }
         }
     }
