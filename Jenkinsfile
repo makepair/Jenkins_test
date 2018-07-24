@@ -1,9 +1,21 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
+                echo 'Building..'
 		sh 'cp /home/danny/workspace/aa.txt /home/danny/workspace/bb.txt'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
